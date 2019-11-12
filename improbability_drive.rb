@@ -10,3 +10,4 @@
 
 puts "Greetings. I am the Improbability Drive for the Heart of Gold. Please enter your name."
 name = gets.chomp
+puts "I work out the chance of negative repurcusions arising from your decisions. #{name}, are you worried about the effects of a decision you have to make today?" 
