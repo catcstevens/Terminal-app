@@ -22,3 +22,8 @@ else paranoid == "false"
     puts "There is no growth without difficult decisions!"
 
 end
+
+puts "The odds of your choice of #{decision} having unexpectedly bad consequences are..."
+print rand(1.5..1120) 
+puts " to 1."
+
