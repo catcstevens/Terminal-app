@@ -15,15 +15,19 @@ paranoid = gets.chomp.downcase
 
 
 if paranoid == "true"
+
     puts "what is the decision you are worried about?"
     decision = gets.chomp
 
 else paranoid == "false"
+
     puts "There is no growth without difficult decisions!"
 
 end
 
 puts "The odds of your choice of #{decision} having unexpectedly bad consequences are..."
-print rand(1.5..1120) 
-puts " to 1."
+odds = rand(1.5..1120) 
+puts "#{odds} to 1."
+
+
 
