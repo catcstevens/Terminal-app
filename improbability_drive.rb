@@ -1,8 +1,10 @@
 ####### Terminal Application #######
 
 ####### Ruby Gems #######
-
-#require 'colourize'
+require 'faker'
+require 'colorize'
+require 'catpix'
+require 'gif'
 
 ####### Methods #######
 
@@ -18,16 +20,34 @@ if paranoid == "true"
 
     puts "what is the decision you are worried about?"
     decision = gets.chomp
+    puts "The odds of your choice of #{decision} having unexpectedly bad consequences are..."
+    odds = rand(1.5..1120) 
+    puts "#{odds} to 1."
 
-else paranoid == "false"
+if odds > 1000
 
-    puts "There is no growth without difficult decisions!"
+    puts "The improbability factor is too high - entering light speed!".colorize(:red)
+
+else
+
+    puts "You are safe to make your decision.".colorize(:yellow)
 
 end
 
-puts "The odds of your choice of #{decision} having unexpectedly bad consequences are..."
-odds = rand(1.5..1120) 
-puts "#{odds} to 1."
+else paranoid == "false"
+
+    # Faker quote from Hitchhikers Guide to the Galaxy
+  puts Faker::Movies::HitchhikersGuideToTheGalaxy.quote.colorize(:red)
 
 
 
+end
+
+# Catpix::print_image " ",
+#   :limit_x => 1.0,
+#   :limit_y => 0,
+#   :center_x => true,
+#   :center_y => true,
+#   :bg => "white",
+#   :bg_fill => true,
+#   :resolution => low
