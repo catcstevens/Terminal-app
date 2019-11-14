@@ -3,8 +3,12 @@
 ####### Ruby Gems #######
 require 'faker'
 require 'colorize'
-require 'catpix'
-require 'gif'
+
+require 'asciiart'
+
+####### Images #######
+
+lightspeed_image = AsciiArt.new("./images/approaching.jpg")
 
 ####### Methods #######
 
@@ -12,9 +16,12 @@ require 'gif'
 
 puts "Greetings. I am the Improbability Drive for the Heart of Gold. Please enter your name."
 name = gets.chomp
-puts "I work out the chance of negative repurcusions arising from your decisions. #{name}, you are worried about the effects of a decision you have to make today? true or false?"
-paranoid = gets.chomp.downcase
 
+
+
+until gameplay = false
+    puts "I work out the chance of negative repurcusions arising from your decisions. #{name}, you are worried about the effects of a decision you have to make today? true or false quit?"
+    paranoid = gets.chomp.downcase
 
 if paranoid == "true"
 
@@ -24,30 +31,27 @@ if paranoid == "true"
     odds = rand(1.5..1120) 
     puts "#{odds} to 1."
 
-if odds > 1000
+if odds > 100
 
     puts "The improbability factor is too high - entering light speed!".colorize(:red)
-
+    
+    puts lightspeed_image.to_ascii_art
 else
 
-    puts "You are safe to make your decision.".colorize(:yellow)
+    puts "You are safe to make your decision.".colorize(:red)
 
 end
 
-else paranoid == "false"
+elsif paranoid == "false"
 
     # Faker quote from Hitchhikers Guide to the Galaxy
   puts Faker::Movies::HitchhikersGuideToTheGalaxy.quote.colorize(:red)
 
+elsif paranoid == "quit"
+    gameplay = false
+    exit 
 
 
 end
 
-# Catpix::print_image " ",
-#   :limit_x => 1.0,
-#   :limit_y => 0,
-#   :center_x => true,
-#   :center_y => true,
-#   :bg => "white",
-#   :bg_fill => true,
-#   :resolution => low
+end
