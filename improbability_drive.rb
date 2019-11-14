@@ -3,7 +3,7 @@
 ####### Ruby Gems #######
 require 'faker'
 require 'colorize'
-
+require 'artii'
 require 'asciiart'
 
 ####### Images #######
@@ -31,14 +31,15 @@ if paranoid == "true"
     odds = rand(1.5..1120) 
     puts "#{odds} to 1."
 
-if odds > 100
+if odds > 1000
 
     puts "The improbability factor is too high - entering light speed!".colorize(:red)
     
     puts lightspeed_image.to_ascii_art
 else
-
-    puts "You are safe to make your decision.".colorize(:red)
+    a = Artii::Base.new :font => 'big'
+    puts a.asciify("DO IT").colorize(:red)
+    #puts artii "You are safe to make your decision."
 
 end
 
