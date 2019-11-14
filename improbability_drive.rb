@@ -12,20 +12,27 @@ lightspeed_image = AsciiArt.new("./images/approaching.jpg")
 
 ####### Arrays #######
 
-# quotes = [
-#      "It is a mistake to think you can solve any major problems just with potatoes.",
-#      "Shee, you guys are so unhip it’s a wonder your bums don’t fall off.",
-#      "Funny,” he intoned funereally, “how just when you think life can’t possibly get any worse it suddenly does.",
-#      "A common mistake that people make when trying to design something completely foolproof is to underestimate the ingenuity of complete fools.",
-#      "I'd far rather be happy than right any day.",
-#      "We demand rigidly defined areas of doubt and uncertainty!"
-#  ]
+quotes = [
+     "It is a mistake to think you can solve any major problems just with potatoes.",
+     "Shee, you guys are so unhip it’s a wonder your bums don’t fall off.",
+     "Funny,” he intoned funereally, “how just when you think life can’t possibly get any worse it suddenly does.",
+     "A common mistake that people make when trying to design something completely foolproof is to underestimate the ingenuity of complete fools.",
+     "I'd far rather be happy than right any day.",
+     "We demand rigidly defined areas of doubt and uncertainty!"
+ ]
 
 # ####### Methods #######
 def clear
     print "\e[H\e[2J"
 end
+
+# def image()
+#     puts().to_ascii_art
+# end
+
 ####### terminal App #######
+
+
 a = Artii::Base.new :font => 'big'
 puts a.asciify("GREETINGS").colorize(:red)
 puts "I am the Improbability Drive for the Heart of Gold."
@@ -67,9 +74,9 @@ end
 
    
 elsif paranoid == "false"
-
+puts quotes.sample
     # Faker quote from Hitchhikers Guide to the Galaxy
-     puts Faker::Movies::HitchhikersGuideToTheGalaxy.quote.colorize(:red)
+     #puts Faker::Movies::HitchhikersGuideToTheGalaxy.quote.colorize(:red)
 
 puts
 
