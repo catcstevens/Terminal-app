@@ -11,10 +11,12 @@ require 'asciiart'
 lightspeed_image = AsciiArt.new("./images/approaching.jpg")
 
 ####### Methods #######
-
+a = Artii::Base.new :font => 'big'
 ####### Terminal App #######
 
-puts "Greetings. I am the Improbability Drive for the Heart of Gold. Please enter your name."
+puts a.asciify("GREETINGS").colorize(:red)
+puts "I am the Improbability Drive for the Heart of Gold."
+puts "Please enter your name."
 name = gets.chomp
 
 
@@ -33,11 +35,12 @@ if paranoid == "true"
 
 if odds > 1000
 
-    puts "The improbability factor is too high - entering light speed!".colorize(:red)
+    puts "The improbability factor is too high".colorize(:red)
+    puts "entering light speed!".colorize(:red)
     
     puts lightspeed_image.to_ascii_art
 else
-    a = Artii::Base.new :font => 'big'
+    
     puts a.asciify("DO IT").colorize(:red)
     #puts artii "You are safe to make your decision."
 
