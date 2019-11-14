@@ -9,6 +9,7 @@ require 'asciiart'
 ####### Images #######
 
 lightspeed_image = AsciiArt.new("./images/approaching.jpg")
+stars_image = AsciiArt.new("./images/stars.jpg")
 
 ####### Arrays #######
 
@@ -31,7 +32,8 @@ end
 # end
 
 ####### terminal App #######
-
+#puts lightspeed_image.to_ascii_art
+puts stars_image.to_ascii_art
 
 a = Artii::Base.new :font => 'big'
 puts a.asciify("GREETINGS").colorize(:red)
