@@ -4,12 +4,12 @@
 require 'faker'
 require 'colorize'
 require 'artii'
-require 'asciiart'
+#require 'asciiart'
 
 ####### Images #######
 
-lightspeed_image = AsciiArt.new("./images/approaching.jpg")
-stars_image = AsciiArt.new("./images/stars.jpg")
+# lightspeed_image = AsciiArt.new("./images/approaching.jpg")
+# stars_image = AsciiArt.new("./images/stars.jpg")
 
 ####### Arrays #######
 
@@ -32,8 +32,11 @@ end
 # end
 
 ####### terminal App #######
+begin
+
+
 #puts lightspeed_image.to_ascii_art
-puts stars_image.to_ascii_art
+#puts stars_image.to_ascii_art
 
 a = Artii::Base.new :font => 'big'
 puts a.asciify("GREETINGS").colorize(:red)
@@ -41,52 +44,57 @@ puts "I am the Improbability Drive for the Heart of Gold."
 puts "Please enter your name."
 name = gets.chomp
 
-gameplay = true
-until gameplay == false
+    gameplay = true
+        until gameplay == false
     
-    puts "I work out the chance of negative repurcusions arising from your decisions."
-    puts "#{name}, you are worried about the effects of a decision you have to make today?" 
-    puts "true, false or quit?"
-    paranoid = gets.chomp.downcase
+            puts "I work out the chance of negative repurcusions arising from your decisions."
+            puts "#{name}, you are worried about the effects of a decision you have to make today?" 
+            puts "true, false or quit?"
+            paranoid = gets.chomp.downcase
 
-if paranoid == "true"
+        if paranoid == "true"
 
-    puts "what is the decision you are worried about?"
-    decision = gets.chomp
-    clear
-    puts "The odds of your choice of #{decision} having unexpectedly bad consequences are..."
-    puts
-    odds = rand(1.5..1120) 
-    puts "#{odds} to 1."
+            puts "what is the decision you are worried about?"
+            decision = gets.chomp
+            clear
+            puts "The odds of your choice of #{decision} having unexpectedly bad consequences are..."
+            puts
+            odds = rand(1.5..1120) 
+            puts "#{odds} to 1."
    
 
-if odds > 1000
+            if odds > 1000
 
-    puts "The improbability factor is too high".colorize(:red)
-    puts "entering light speed!".colorize(:red)
-    clear
-    puts lightspeed_image.to_ascii_art
-else
-    a = Artii::Base.new :font => 'big'
-    puts a.asciify("DO IT").colorize(:red)
-    #puts artii "You are safe to make your decision."
-    puts
+            puts "The improbability factor is too high".colorize(:red)
+            puts "entering light speed!".colorize(:red)
+            clear
+            # puts lightspeed_image.to_ascii_art
+        else
+             a = Artii::Base.new :font => 'big'
+            puts a.asciify("DO IT").colorize(:red)
+            #puts artii "You are safe to make your decision."
+            puts
 
-end
+            end
 
    
-elsif paranoid == "false"
-puts quotes.sample
-    # Faker quote from Hitchhikers Guide to the Galaxy
-     #puts Faker::Movies::HitchhikersGuideToTheGalaxy.quote.colorize(:red)
+        elsif paranoid == "false"
+            clear
+        puts quotes.sample
+    #       Faker quote from Hitchhikers Guide to the Galaxy
+     #      puts Faker::Movies::HitchhikersGuideToTheGalaxy.quote.colorize(:red)
 
-puts
+        puts
 
-elsif paranoid == "quit"
-    gameplay = false
-    clear
-    exit 
-end
+        elsif paranoid == "quit"
+            gameplay = false
+            clear
+            exit 
+        end
 
 end
 `say "Don't Panic"`
+
+rescue
+    puts "Don't Panic! quit to end program"
+end
