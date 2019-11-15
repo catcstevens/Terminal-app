@@ -44,8 +44,8 @@ puts "I am the Improbability Drive for the Heart of Gold."
 puts "Please enter your name."
 name = gets.chomp
 
-    gameplay = true
-        until gameplay == false
+    anxiety = true
+        until anxiety == false
     
             puts "I work out the chance of negative repurcusions arising from your decisions."
             puts "#{name}, you are worried about the effects of a decision you have to make today?" 
@@ -63,19 +63,19 @@ name = gets.chomp
             puts "#{odds} to 1."
    
 
-            if odds > 1000
+                if odds > 1000
 
-            puts "The improbability factor is too high".colorize(:red)
-            puts "entering light speed!".colorize(:red)
-            clear
-            # puts lightspeed_image.to_ascii_art
-        else
-             a = Artii::Base.new :font => 'big'
-            puts a.asciify("DO IT").colorize(:red)
-            #puts artii "You are safe to make your decision."
-            puts
+                    puts "The improbability factor is too high".colorize(:red)
+                    puts "entering light speed!".colorize(:red)
+                    clear
+                    # puts lightspeed_image.to_ascii_art
+                else
+                    a = Artii::Base.new :font => 'big'
+                    puts a.asciify("DO IT").colorize(:red)
+                     #puts artii "You are safe to make your decision."
+                    puts
 
-            end
+                end
 
    
         elsif paranoid == "false"
@@ -87,7 +87,7 @@ name = gets.chomp
         puts
 
         elsif paranoid == "quit"
-            gameplay = false
+            anxiety = false
             clear
             exit 
         end
@@ -96,5 +96,5 @@ end
 `say "Don't Panic"`
 
 rescue
-    puts "Don't Panic! quit to end program"
+    puts "Don't Panic! quit to end program."
 end
