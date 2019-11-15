@@ -27,16 +27,22 @@ def clear
     print "\e[H\e[2J"
 end
 
-# def image()
-#     puts().to_ascii_art
-# end
+def animation
+    3.times do
+    i = 1
+    while i < 4
+      print "\e[H\e[2J"
+      File.foreach("./images/#{i}.rb") { |f| puts f }
+      sleep(0.3)
+      i += 1
+    end
+  end
+end
+
 
 ####### terminal App #######
 begin
 
-
-#puts lightspeed_image.to_ascii_art
-#puts stars_image.to_ascii_art
 
 a = Artii::Base.new :font => 'big'
 puts a.asciify("GREETINGS").colorize(:red)
@@ -47,7 +53,7 @@ name = gets.chomp
     anxiety = true
         until anxiety == false
     
-            puts "I work out the chance of negative repurcusions arising from your decisions."
+            puts "I work out the chance of negative repurcussions arising from your decisions."
             puts "#{name}, you are worried about the effects of a decision you have to make today?" 
             puts "true, false or quit?"
             paranoid = gets.chomp.downcase
@@ -61,14 +67,19 @@ name = gets.chomp
             puts
             odds = rand(1.5..1120) 
             puts "#{odds} to 1."
+            puts
+            puts
    
 
-                if odds > 1000
+                if odds > 100
 
-                    puts "The improbability factor is too high".colorize(:red)
-                    puts "entering light speed!".colorize(:red)
-                    clear
-                    # puts lightspeed_image.to_ascii_art
+                    puts "The improbability factor is too high"#.colorize(:red)
+                    puts "entering light speed!"#.colorize(:red)
+                    puts
+
+                    animation
+                    #clear
+                    
                 else
                     a = Artii::Base.new :font => 'big'
                     puts a.asciify("DO IT").colorize(:red)

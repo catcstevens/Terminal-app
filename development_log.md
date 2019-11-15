@@ -19,6 +19,15 @@ Today has been quite successful. The control flow diagram and project management
 
 ! [trello screenshot](images/trello2.png)
 
-### **Log 13/11/2019**
+### **Log 14/11/2019**
 
 A frustrating, challenging, but productive day at school today. My most difficult issue has been that my colorize is broken so that it colorizes, but then repeats the string in white. I am going to ignore the problem for the moment to focus on more important things. I have managed to add a loop, and found a way to randomly pull a quote from an array. I have also added a very simple method, but I will add a more complex method tomorrow. I have also figured out the best place to put my error handling.  
+
+### **Log 15/11/2019**
+
+! [trello screenshot](images/trello_15_Nov.png)
+
+My trello board has changed quite a bit today. It has been such a useful tool to use to make sure I am staying on task and not overlooking any of the rubrik. I can see how the project has changed as I have been working on it, but has meant I have needed to make changes to the trello and to the flowchart. 
+
+! [flowchart screenshot](flow_chart_15_Nov.png)
+

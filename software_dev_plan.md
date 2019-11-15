@@ -30,24 +30,37 @@ These will both use local variables.
 
 1. Control Structure/ loops
 
-After getsing the users name this application enters an until loop. The user can input true/ false / quit. If the user inputs true it will enter an if/else, output a message or image and return to the beginning of the loop. If the user enters false the appliaction will output a quote, then return to the beginning of the loop. Inputting quit will exit from the loop.
+After getsing the users name this application enters an _until_ loop with a local variable. The user can input true/ false / quit. If the user inputs true it will enter an if/else, output a message or image and return to the beginning of the loop. If the user enters false the appliaction will output a quote, then return to the beginning of the loop. Inputting quit will exit from the loop.
 
-*make sure to use the terms "use of variables and variable scope"*
+There will be moving images that us a _while_ loop to loop through multiple static images to make an animation. This will use a local variable that incrmentally increases as it goes through the loop.
+
 
 1. Error Handling
-* begin, rescue, end. *Where will it be used?*
+
+All of the applications code will be in _begin_ , _rescue_ , _end_, in case of errors. If an error occurs it will `say "Don't Panic"`, it will also print the message in case the users sound is muted.
+
 
 # User Interaction and Development
-*Develop an outline of the user interaction and experience for the application.
-Your outline must include:
-- how the user will find out how to interact with / use each feature
-- how the user will interact with / use each feature
-- how errors will be handled by the application and displayed to the user* 
+
+ - User will run the improbability_drive.rb from the index.sh file.
+ - A welcome will print to the screen in Artii and then the user will be prompted to input their name.
+  - After inputting their name to the command line the program will greet them and ask if they have a decision they need to make. They will be prompted to type true, false or quit.
+   - If they input true the program will ask what their decision is. It will output whether the chances of negative repurcussions from their decision are high enough to warrant concern.
+    - If the odds are low the program will output "Do It"
+    - If the odds are high the user will be warned that they are going into hyperdrive. An image will simulate travelling through space.
+
+    - If, however they input false the program will output a sarcastic quote from the Hitchhikers Guide to the Galaxy and a different animated image.
+
+    - After the image output the program will loop back to asking if the user has any decisions to make.
+
+    - Inputting quit will quit the program.
+
+    - If an error occurs the program will print and say, "Don't Panic"."
 
 
 # Control Flow Diagram
 
-link to diagram saved in seperate image file
+! [flowchart screenshot](flow_chart_15_Nov.png)
 
 
 
