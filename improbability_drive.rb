@@ -73,14 +73,15 @@ name = gets.chomp
 
                 if odds > 100
 
-                    puts "The improbability factor is too high"#.colorize(:red)
-                    puts "entering light speed!"#.colorize(:red)
+                    puts "The improbability factor is too high".colorize(:red)
+                    puts "entering light speed!".colorize(:red)
                     puts
-
+                    sleep(4.0)
                     animation
                     #clear
                     
                 else
+                    puts
                     a = Artii::Base.new :font => 'big'
                     puts a.asciify("DO IT").colorize(:red)
                      #puts artii "You are safe to make your decision."
