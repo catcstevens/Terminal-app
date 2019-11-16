@@ -8,7 +8,7 @@ Before leaving yesterday Bianca gave me the go ahead to start working on the con
 
 I have a good idea of what my terminal app will do, so I decided to start on the control flow diagram - glitch number 2! I have built such a simple diagram that I am certain it is missing elements. I decided to focus instead on my project management plan, which really fleshed out the idea, although I think it will change as I go. I have succesfully avoided jumping into hours of investigating the potential sprinkles I will use if I get time and instead stuck to my Trello plan. 
 
-! [trello screenshot](images/First_trello.png)
+! [trello screenshot](screenshots/First_trello.png)
 
 https://drive.google.com/file/d/16TaTL9iJopHCegiZzf79Vr9ExKMieh2T/view?usp=sharing
 
@@ -31,3 +31,6 @@ My trello board has changed quite a bit today. It has been such a useful tool to
 
 ! [flowchart screenshot](flow_chart_15_Nov.png)
 
+I have started tenuously working on some sprinkles. I have added an animated image, and will add another two tomorrow. I am still concerned that my app is too simple - but I am getting close to ticking all the boxes, so I will finish prettifying and then see if there is anyway I can add to the complexity. 
+
+This morning I had to give up on colorize as there appears to be a problem with using asciiart and colorize at the same time. 
