@@ -69,10 +69,10 @@ begin
     until anxiety == false
     
         puts "I work out the chance of negative repurcussions arising from your decisions."
-        puts "#{name}.colorize(red), you are worried about the effects of a decision you have to make today?" 
+        puts "\n #{name}, you are worried about the effects of a decision you have to make today?".colorize(:red)
         
     
-        puts "true, false or quit?"
+        puts "\ntrue, false or quit?"
         paranoid = gets.chomp.downcase
 
         ######BEGIN OF IF(TRUE) ELSIF(FALSE) ELSIF(TRUE)#####
@@ -127,7 +127,7 @@ begin
             puts a.asciify("Don't Panic").colorize(:red)
 
             #VOICE SAYS DON'T PANIC#
-            `say "Don't Panic"`
+            `say -v "oliver" "Don't Panic"`
             exit 
         end
         #######END OF ELSE ELSIF ELSIF########
@@ -137,5 +137,5 @@ begin
     #######IF THERE IS A BUG THIS WILL HAPPEN#######
 rescue
     puts "Don't Panic! quit to end program."
-    `say "Don't Panic"`
+    `say -v "oliver" "Don't Panic"`
 end
