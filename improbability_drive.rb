@@ -18,6 +18,18 @@ quotes = [
      "'We demand rigidly defined areas of doubt and uncertainty!' "
  ]
  
+ 
+ #if no ARGV is given run this code
+    if ARGV.empty?
+        
+        puts "Please enter your name."
+        name = gets.chomp.capitalize
+    else 
+        name = ARGV[0]
+    end
+    ARGV.clear
+
+
 # ####### Methods #######
 
 #clears terminal to make it less cluttered
@@ -50,16 +62,14 @@ begin
     # plays clip of the computer from original radio show
     `afplay -t 7 ./hithere.mp3`
 
-    puts "Please enter your name."
-    name = gets.chomp
-
+    
     anxiety = true
 
     ########BEGIN OF UNTIL LOOP#######
     until anxiety == false
     
         puts "I work out the chance of negative repurcussions arising from your decisions."
-        puts "#{name}, you are worried about the effects of a decision you have to make today?" 
+        puts "#{name}.colorize(red), you are worried about the effects of a decision you have to make today?" 
         
     
         puts "true, false or quit?"
