@@ -38,29 +38,30 @@ def clear
 end
 
 # loops through still asciiart to animate it
-def animation
+def animation(x)
     3.times do
     i = 1
     while i < 4
       print "\e[H\e[2J"
-      File.foreach("./images/#{i}.rb") { |f| puts f }
+      File.foreach("./images#{x}/#{i}.rb") { |f| puts f }
       sleep(0.3)
       i += 1
     end
   end
 end
 
+
 #prompt = TTY::Prompt.new
 ####### terminal App #######
 begin
-
+    
     #Asciiart greeting in red
     a = Artii::Base.new :font => 'big'
     puts a.asciify("GREETINGS").colorize(:red)
     puts "I am the Improbability Drive for the Heart of Gold."
 
-    # plays clip of the computer from original radio show
-    `afplay -t 7 ./hithere.mp3`
+    # plays clip of the computer from original Hitchhikers radio show
+    `afplay -t 6.3 ./hithere.mp3`
 
     
     anxiety = true
@@ -95,7 +96,8 @@ begin
                 puts "entering light speed!".colorize(:red)
                 puts
                 sleep(4.0)
-                animation
+                # plays star animation
+                animation(1)
                 #clear
                 
             else
@@ -112,6 +114,8 @@ begin
             clear
             puts
 
+            #animation of robot waving
+            animation(2)
             #PRINTS RANDOM HITCHHIKERS QUOTE FROM ARRAY#
             puts quotes.sample
             puts "The Hitchhiker's Guide to the Galaxy - Douglas Adams"
@@ -128,6 +132,7 @@ begin
 
             #VOICE SAYS DON'T PANIC#
             `say -v "oliver" "Don't Panic"`
+            
             exit 
         end
         #######END OF ELSE ELSIF ELSIF########

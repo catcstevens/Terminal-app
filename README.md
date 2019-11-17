@@ -31,9 +31,12 @@
    # Dependencies
 
    1. Only tested on MacOS Mojave 10.14.6
-   2. Gems used
+   2. Volume turned on for non-essential elements of app
+   3. Gems used
       1. Colorize - changes the text colour in the terminal
       2. Artii
       3. Faker
       4. tty-prompt
+
+
 
