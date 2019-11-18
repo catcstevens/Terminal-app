@@ -41,6 +41,12 @@ Today has been another challenging day, but I think that my application is almos
 
 Part of our rubrik was creating a command line argument, which I have been avoiding, but I have implemeted it with help from Bianca. Unfortunately, when I added it it broke my code. This was a good opportunity to check if my error handling works (it does), but I had no idea why it was broken. I learnt that a command line argument doesn't work well with a 'gets' command, so I had to add a fix by writing ARGV clear into the code. I also learnt how to go back to my last git commit to where the code had been working, which is very useful. It was also a great reminder of how important it is to keep using git commit!
 
-[flowchart screenshot](screenshots/flow_chart_16_Nov.png)
+[flowchart screenshot](screenshots/flow_chart_15_Nov.png)
 
 Trello is almost all done now!
+
+### **Log 18/11/2019**
+
+https://trello.com/b/4JhLkvjx
+
+

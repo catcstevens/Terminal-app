@@ -50,17 +50,23 @@ def animation(x)
   end
 end
 
+# asciiart #
+def art(x)
+    a = Artii::Base.new :font => 'big'
+    puts a.asciify(x).colorize(:red)
+end
 
 #prompt = TTY::Prompt.new
 ####### terminal App #######
 begin
-    
+
     #Asciiart greeting in red
-    a = Artii::Base.new :font => 'big'
-    puts a.asciify("GREETINGS").colorize(:red)
+    art("GREETINGS")
+    
+    
     puts "I am the Improbability Drive for the Heart of Gold."
 
-    # plays clip of the computer from original Hitchhikers radio show
+    #plays clip of the computer from original Hitchhikers radio show
     `afplay -t 6.3 ./hithere.mp3`
 
     
@@ -69,8 +75,8 @@ begin
     ########BEGIN OF UNTIL LOOP#######
     until anxiety == false
     
-        puts "I work out the chance of negative repurcussions arising from your decisions."
-        puts "\n #{name}, you are worried about the effects of a decision you have to make today?".colorize(:red)
+        puts "\nI work out the chance of negative repurcussions arising from your decisions."
+        puts "\n#{name}, you are worried about the effects of a decision you have to make today?".colorize(:red)
         
     
         puts "\ntrue, false or quit?"
@@ -83,36 +89,32 @@ begin
             decision = gets.chomp
             clear
             puts "The odds of your choice of #{decision} having unexpectedly bad consequences are..."
-            puts
             odds = rand(1.5..1120) 
-            puts "#{odds} to 1."
-            puts
-            puts
+            puts "\n#{odds} to 1."
+            
    
             #######BEGIN OF IF IMPROBABILITY IS TOO HIGH OR ELSE#######
             if odds > 100
 
-                puts "The improbability factor is too high".colorize(:red)
-                puts "entering light speed!".colorize(:red)
-                puts
-                sleep(4.0)
+                puts "\nThe improbability factor is too high".colorize(:red)
+                puts "entering light speed!\n".colorize(:red)
+                
+                sleep(5.0)
                 # plays star animation
                 animation(1)
-                #clear
+                clear
                 
             else
-                puts
-                a = Artii::Base.new :font => 'big'
-                puts a.asciify("DO IT").colorize(:red)
-                    #puts artii "You are safe to make your decision."
-                puts
+                #puts artii "You are safe to make your decision."
+                puts "\nThe odds of something going wrong are low so..."
+                art("DO IT!")
+        
 
             end
             #######END OF IF ELSE#######
             
         elsif paranoid == "false"
             clear
-            puts
 
             #animation of robot waving
             animation(2)
@@ -120,15 +122,14 @@ begin
             puts quotes.sample
             puts "The Hitchhiker's Guide to the Galaxy - Douglas Adams"
           
-            puts
             
         elsif paranoid == "quit"
             anxiety = false
             clear
 
             #PRINTS DON'T PANIC IN RED ASCIIART#
-            a = Artii::Base.new :font => 'big'
-            puts a.asciify("Don't Panic").colorize(:red)
+            
+            art("DON'T PANIC")
 
             #VOICE SAYS DON'T PANIC#
             `say -v "oliver" "Don't Panic"`
@@ -141,6 +142,7 @@ begin
 
     #######IF THERE IS A BUG THIS WILL HAPPEN#######
 rescue
+    #######PRINTS DON'T PANIC AND SAYS IT#######
     puts "Don't Panic! quit to end program."
     `say -v "oliver" "Don't Panic"`
 end

@@ -4,7 +4,7 @@ The terminal application that I will be developing will be the long awaited Infi
 
 ## Statement of Purpose and Scope
 
-The user will approach the Infite Improbability Drive (IID) with a burning conundrum. The IID will use its advanced processing speed to work out the improbability of the event having negative repurcussions. It will then inform the user what there chances are, and as a byproduct the energy created in solving this problem will provide the energy to power the heart of darkness. If the problem gives a result of infinite improbability it will create an image to indicate flying in hyper-drive.
+The user will approach the Infite Improbability Drive (IID) with a burning conundrum. The IID will use its advanced processing speed to work out the improbability of the event having negative repercussions. It will then inform the user what those chances are, and as a byproduct the energy created in solving this problem will provide the energy to power the heart of darkness. If the problem gives a result of infinite improbability it will create an image to indicate flying in hyper-drive.
 
 ### The Problem
 
@@ -20,7 +20,7 @@ The user will input the decision they are afraid to make due to fear of their ch
 
 # Features
 
-1. Method
+1. Methods
 
 There will be a lot of text and images in this application, so there will be a method to clear the screen at each condition so that the user output can be more easily identified. 
 
@@ -30,14 +30,14 @@ These will both use local variables.
 
 2. Control Structure/ loops
 
-After getsing the users name this application enters an _until_ loop with a local variable. The user can input true/ false / quit. If the user inputs true it will enter an if/else, output a message or image and return to the beginning of the loop. If the user enters false the appliaction will output a quote, then return to the beginning of the loop. Inputting quit will exit from the loop.
+After getsing the user's name this application enters an _until_ loop with a local variable. The user can input true/ false / quit. If the user inputs true it will enter an if/else, output a message or image and return to the beginning of the loop. If the user enters false the appliaction will output a quote, then return to the beginning of the loop. Inputting quit will exit from the loop.
 
-There will be moving images that us a _while_ loop to loop through multiple static images to make an animation. This will use a local variable that incrmentally increases as it goes through the loop.
+There will be moving images that use a _while_ loop to loop through multiple static images to make an animation. This will use a local variable that incrmentally increases as it goes through the loop.
 
 
 3. Error Handling
 
-All of the applications code will be in _begin_ , _rescue_ , _end_, in case of errors. If an error occurs it will `say "Don't Panic"`, it will also print the message in case the users sound is muted.
+All of the applications code will be in _begin_ , _rescue_ , _end_, in case of errors. If an error occurs it will `say "Don't Panic"`, it will also print the message in case the user's sound is muted.
 
 
 # User Interaction and Development
@@ -60,7 +60,7 @@ All of the applications code will be in _begin_ , _rescue_ , _end_, in case of e
 
 # Control Flow Diagram
 
-! [flowchart screenshot]
+[flowchart screenshot](screenshots/flow_chart_15_Nov.png)
 
 
 
