@@ -34,9 +34,9 @@
    2. Volume turned on for non-essential elements of app
    3. Gems used
       1. Colorize - changes the text colour in the terminal
-      2. Artii
-      3. Faker
-      4. tty-prompt
+      2. Artii - adds text art
+      3. Faker - used to generate a list of quotes from Hitchhikers Guide to the Galaxy. 
+      4. tty-prompt - added an options list
 
 
 
