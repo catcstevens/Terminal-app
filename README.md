@@ -29,7 +29,8 @@ This application, written in Ruby and run on the command line will help busy pro
    > bundle install
 
 7. In the terminal run bash script to run the file.
-> chmod u+x index.sh
+
+      > chmod u+x index.sh
 
    > ./index.sh
 
