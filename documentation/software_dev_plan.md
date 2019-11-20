@@ -60,7 +60,7 @@ All of the applications code will be in _begin_ , _rescue_ , _end_, in case of e
 
 # Control Flow Diagram
 
-[flowchart screenshot](media/screenshots/flow_chart_15_Nov.png)
+![flowchart screenshot](/media/screenshots/flow_chart_15_Nov.png)
 
 
 
