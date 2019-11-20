@@ -56,12 +56,16 @@ def art(x)
     puts a.asciify(x).colorize(:red)
 end
 
+def dont_panic
+    art("DON'T PANIC")
+    `say -v "oliver" "Don't Panic"`
+end 
 
 
-#prompt = TTY::Prompt.new
 ####### terminal App #######
 begin
 
+    
     #Asciiart greeting in red
     art("GREETINGS")
     
@@ -69,7 +73,7 @@ begin
     puts "I am the Improbability Drive for the Heart of Gold."
 
     #plays clip of the computer from original Hitchhikers radio show
-    `afplay -t 6.3 ./hithere.mp3`
+    `afplay -t 6.3 ./media/hithere.mp3`
 
     
     anxiety = true
@@ -130,10 +134,9 @@ begin
             clear
 
             #PRINTS DON'T PANIC IN RED ASCIIART#
-            art("DON'T PANIC")
-
             #VOICE SAYS DON'T PANIC#
-            `say -v "oliver" "Don't Panic"`
+            dont_panic
+           
             
             exit 
         end
@@ -144,6 +147,5 @@ begin
     #######IF THERE IS A BUG THIS WILL HAPPEN#######
 rescue
     #######PRINTS DON'T PANIC AND SAYS IT#######
-    puts "Don't Panic! quit to end program."
-    `say -v "oliver" "Don't Panic"`
+    dont_panic
 end
