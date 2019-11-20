@@ -43,7 +43,7 @@ def animation(x)
     i = 1
     while i < 4
       print "\e[H\e[2J"
-      File.foreach("./images#{x}/#{i}.rb") { |f| puts f }
+      File.foreach("./media/images#{x}/#{i}.rb") { |f| puts f }
       sleep(0.3)
       i += 1
     end
