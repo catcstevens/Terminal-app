@@ -56,6 +56,8 @@ def art(x)
     puts a.asciify(x).colorize(:red)
 end
 
+
+
 #prompt = TTY::Prompt.new
 ####### terminal App #######
 begin
@@ -128,7 +130,6 @@ begin
             clear
 
             #PRINTS DON'T PANIC IN RED ASCIIART#
-            
             art("DON'T PANIC")
 
             #VOICE SAYS DON'T PANIC#
