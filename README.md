@@ -29,12 +29,13 @@ This application, written in Ruby and run on the command line will help busy pro
    > bundle install
 
 7. In the terminal run bash script to run the file.
+> chmod u+x index.sh
 
-   > bash.index.sh
+   > ./index.sh
 
 8. Alternatively run
 
-   > ruby.improbability_drive.rb (your_name)
+   > ruby improbability_drive.rb your_name
 
    # Dependencies
 
